@@ -43,6 +43,7 @@ class FiguresController < ApplicationController
 
   patch '/figures/:id' do
     @figure = Figure.find(params[:id])
+    @figure.update(name: params[:figure][:name])
     @title = Title.create(params[:title]) if params[:title][:name] != ""
     @figure.titles << @title if @title
     @landmark = Landmark.create(params[:landmark]) if params[:landmark][:name] != ""
