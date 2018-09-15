@@ -16,4 +16,9 @@ class FiguresController < ApplicationController
     erb :'/figures/edit'
   end
 
+  post '/figures' do
+    binding.pry
+    redirect "/figures/#{@figure.id}"
+  end
+
 end
