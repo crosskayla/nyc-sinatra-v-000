@@ -19,8 +19,8 @@ class FiguresController < ApplicationController
 
   post '/figures' do
     @figure = Figure.create(params[:figure])
-    @title = Title.create(params[:title]) if params[:title]
-    @landmark = Landmark.create(params[:landmark]) if params[:landmark]
+    @title = Title.create(params[:title]) if params[:title][:name] != ""
+    @landmark = Landmark.create(params[:landmark]) if params[:landmark][:name] != ""
 
     if !@title
       params[:titles].each do |title_id|
