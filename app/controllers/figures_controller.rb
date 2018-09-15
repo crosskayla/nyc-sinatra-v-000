@@ -26,6 +26,12 @@ class FiguresController < ApplicationController
       end
     end
 
+    if !@landmark
+      params[:landmarks].each do |landmark_id|
+        @figure.landmarks << Landmark.find(title_id)
+      end
+    end
+
     redirect "/figures/#{@figure.id}"
   end
 
