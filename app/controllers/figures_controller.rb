@@ -40,4 +40,8 @@ class FiguresController < ApplicationController
     redirect "/figures/#{@figure.id}"
   end
 
+  patch '/figures/:id' do
+    
+  end
+
 end
