@@ -26,13 +26,13 @@ class FiguresController < ApplicationController
 
     if !@title
       params[:titles].each do |title|
-        @figure.titles << Title.find(title.id)
+        @figure.titles << Title.find(title[:id])
       end
     end
 
     if !@landmark
-      params[:landmarks].each do |landmark_id|
-        @figure.landmarks << Landmark.find(title_id)
+      params[:landmarks].each do |landmark|
+        @figure.landmarks << Landmark.find(landmark[:id])
       end
     end
 
