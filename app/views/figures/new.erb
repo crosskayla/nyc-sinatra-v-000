@@ -5,14 +5,14 @@
     <input type="checkbox" name="figure[titles][][name]"><%= title.name %><br>
   <% end %>
   <p>Create New Title:</p>
-  <input type="text" name="figure[titles][][name]">
+  <input type="text" name="title][name]">
   <p>Landmarks:<p>
   <% Landmark.all.each do |landmark| %>
     <input type="checkbox" name="figure[landmarks][][name]"><%= landmark.name %><br>
   <% end %>
   <p>Create New Landmark:</p>
-  Name: <input type="text" name="figure[landmarks][][name]">
-  Year: <input type="text" name="figure[landmarks][][year]">
+  Name: <input type="text" name="landmark[name]">
+  Year: <input type="text" name="landmark[year]">
   <br>
   <input type="submit" name="submit">
 </form>
