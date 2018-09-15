@@ -20,7 +20,9 @@ class FiguresController < ApplicationController
   post '/figures' do
     @figure = Figure.create(params[:figure])
     @title = Title.create(params[:title]) if params[:title][:name] != ""
+    @figure.titles << @title if @title
     @landmark = Landmark.create(params[:landmark]) if params[:landmark][:name] != ""
+    @figure.landmarks << @landmark if @landmark
 
     if !@title
       params[:figure][:titles_ids].each do |title_id|
