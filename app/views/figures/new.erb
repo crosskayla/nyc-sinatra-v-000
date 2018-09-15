@@ -4,4 +4,6 @@
   <% Title.all do |title| %>
     <input type="checkbox" name="figure[titles][]"><%= title.name %>
   <% end %>
+  <p>Create New Title:</p>
+    <input type="text" name="figure[titles][]">
 </form>
