@@ -8,7 +8,7 @@
   <input type="text" name="figure[titles][][name]">
   <p>Landmarks:<p>
   <% Landmark.all do |landmark| %>
-    <input type="checkbox" name="figure[landmarks][]"><%= landmark.name %>
+    <input type="checkbox" name="figure[landmarks][][name]"><%= landmark.name %>
   <% end %>
   <p>Create New Landmark:</p>
   <input type="text" name="figure[landmarks][]">
