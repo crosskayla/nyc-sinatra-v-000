@@ -2,13 +2,13 @@
   <p>Name: <input type="text" name="figure[name]" id="figure_name"></p>
   <p>Titles:<p>
   <% Title.all.each do |title| %>
-    <input type="checkbox" name="figure[titles][][id]" value="<%= title.id %>"><%= title.name %><br>
+    <input type="checkbox" name="titles[][id]" value="<%= title.id %>"><%= title.name %><br>
   <% end %>
   <p>Create New Title:</p>
   <input type="text" name="title][name]">
   <p>Landmarks:<p>
   <% Landmark.all.each do |landmark| %>
-    <input type="checkbox" name="figure[landmarks][][id]" value="<%= landmark.id %>"><%= landmark.name %><br>
+    <input type="checkbox" name="landmarks[][id]" value="<%= landmark.id %>"><%= landmark.name %><br>
   <% end %>
   <p>Create New Landmark:</p>
   Name: <input type="text" name="landmark[name]">
