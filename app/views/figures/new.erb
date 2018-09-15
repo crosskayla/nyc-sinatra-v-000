@@ -5,5 +5,9 @@
     <input type="checkbox" name="figure[titles][]"><%= title.name %>
   <% end %>
   <p>Create New Title:</p>
-    <input type="text" name="figure[titles][]">
+  <input type="text" name="figure[titles][]">
+  <p>Landmarks:<p>
+  <% Landmark.all do |landmark| %>
+    <input type="checkbox" name="figure[landmarks][]"><%= landmark.name %>
+  <% end %>
 </form>
