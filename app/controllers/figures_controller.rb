@@ -34,7 +34,6 @@ class FiguresController < ApplicationController
     end
 
     @figure.save
-
     redirect "/figures/#{@figure.id}"
   end
 
