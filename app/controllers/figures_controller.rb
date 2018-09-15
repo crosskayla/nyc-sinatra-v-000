@@ -20,7 +20,12 @@ class FiguresController < ApplicationController
     @figure = Figure.create(params[:figure])
     @title = Title.create(params[:title]) if params[:title]
     @landmark = Landmark.create(params[:landmark]) if params[:landmark]
-    
+    if !@title
+      params[:titles].each do |title_id|
+        @figure.titles << title_id
+      end
+    end
+
     redirect "/figures/#{@figure.id}"
   end
 
