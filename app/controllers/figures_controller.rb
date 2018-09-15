@@ -41,7 +41,7 @@ class FiguresController < ApplicationController
   end
 
   patch '/figures/:id' do
-    
+    @figure = Figure.find(params[:id])
   end
 
 end
