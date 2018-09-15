@@ -2,12 +2,14 @@
   <p>Figure name: <input type="text" name="figure[name]" id="figure_name"></p>
   <p>Titles:<p>
   <% Title.all do |title| %>
-    <input type="checkbox" name="figure[titles][]"><%= title.name %>
+    <input type="checkbox" name="figure[titles][][name]"><%= title.name %>
   <% end %>
   <p>Create New Title:</p>
-  <input type="text" name="figure[titles][]">
+  <input type="text" name="figure[titles][][name]">
   <p>Landmarks:<p>
   <% Landmark.all do |landmark| %>
     <input type="checkbox" name="figure[landmarks][]"><%= landmark.name %>
   <% end %>
+  <p>Create New Landmark:</p>
+  <input type="text" name="figure[landmarks][]">
 </form>
