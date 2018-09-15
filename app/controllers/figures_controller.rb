@@ -22,7 +22,7 @@ class FiguresController < ApplicationController
     @landmark = Landmark.create(params[:landmark]) if params[:landmark]
     if !@title
       params[:titles].each do |title_id|
-        @figure.titles << title_id
+        @figure.titles << Title.find(title_id)
       end
     end
 
