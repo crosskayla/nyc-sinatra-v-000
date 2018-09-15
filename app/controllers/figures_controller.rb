@@ -22,8 +22,6 @@ class FiguresController < ApplicationController
     @title = Title.create(params[:title]) if params[:title][:name] != ""
     @landmark = Landmark.create(params[:landmark]) if params[:landmark][:name] != ""
 
-    #binding.pry
-
     if !@title
       params[:titles].each do |title|
         @figure.titles << Title.find(title[:id])
