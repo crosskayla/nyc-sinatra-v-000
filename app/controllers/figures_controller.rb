@@ -13,7 +13,7 @@ class FiguresController < ApplicationController
   end
 
   get '/figures/:id/edit' do
-
+    erb :'/figures/edit'
   end
 
 end
